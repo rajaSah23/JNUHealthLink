@@ -53,7 +53,7 @@ router.get('/user', (req, res) => {
             await newUser.validate(); // Validate the user model
     
             newUser.save();
-            // console.log(newUser);
+            console.log(newUser);
             // console.log(newUser.name);
             // console.log(parseInt(newUser.phone) + 1);
             dataHandler.setSharedData("success","Account Created Succesfully");
