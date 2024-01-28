@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Appointment</title>
+    <link rel="stylesheet" href="/newAppointment.css" />
+    <link rel="stylesheet" href="/userDashboard.css" />
+    <link rel="stylesheet" href="/sidenavbar.css" />
+    <link rel="stylesheet" href="/toaster.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    
+   
+    <div class="nav">
+      <%- include('partials/sideNavbar.ejs',{user,userid:userid}) %>
+    </div>
+
+    <div>
+      <div class="container">
+        <form method="post" action="/user/appointment/id2">
+          <div class="row">
+            <h1>
+              <i class="fa-solid fa-calendar-check"></i> &nbsp; Book Appointment
+            </h1>
+          </div>
+          <hr />
+          <h3>Select Specialist</h3>
+          <div class="row">
+            <div class="col-half">
+              <div class="input-group">
+                <select name="specialty">
+
+                  <% let unique = []; 
+                  specialties.forEach(element => {
+                      if (!unique.includes(element.specialty)) {
+                          unique.push(element.specialty);
+                      }
+                  });%>
+                
+                  <% for(let specialty of unique){ %>
+                    <% if(selected.specialty===specialty) {%>
+                      <option selected><%= specialty %></option>
+                    <% }else{ %>
+                    <option ><%= specialty %></option>
+                    <% } %>
+                  <% } %>
+                </select>
+              </div>
+            </div>
+            <div class="col-half">
+              <button>Find</button>
+            </div>
+          </div>
+          
+        </form>
+
+
+
+
+        <!-- Search Results -->
+        <div class="row">
+          <% let a=false %> <% if(doctors!= undefined){ %>
+          <div class="wrapper">
+            <div class="main-title">Availbale Doctors</div>
+
+            <% for(let doctor of doctors){ %>
+            <input type="radio" id="<%= doctor._id %>" name="accordion" />
+            <label class="item" for="<%= doctor._id %>">
+              <div class="titl"><%= doctor.name %></div>
+              <div class="contnt">
+                <h4>Bio</h4>
+                <%= doctor.bio %>
+                <br><br>
+                <h5>Email : <%= doctor.email %></h5>
+                <h5>Phone : <%= doctor.phone %></h5>
+                <div>
+                  <form action="/user/appointment/book" method="post">
+                    <input type="hidden" name="userid" value="<%= user._id %>" />
+                    <input type="hidden" name="docid" value="<%= doctor._id %>" />
+                    <input type="date" id="date" name="date" required>
+                    <input type="time" id="time" name="time" step="3600" required>
+                    <input type="hidden" name="status" value="Pending" />
+                  <!-- <button type="button" style="width: auto;">Check Availbility</button> -->
+                  <button  style="width: auto;">Book now</button>
+                  <span style="color: orange;">&nbsp;please select time in 'hr : 00' format.</span>
+                </form>
+                </div>
+              </div>
+            </label>
+            <% } %>    
+        <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="notifications"></div>
+
+    <script src="/toaster.js"></script>
+    
+    
+    <% if(message){ %>
+      <script>createToast("<%= msgType %>", 'fa-solid fa-circle-check',"<%= msgType %>", "<%= message %>");</script> 
+      <% } %>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JNU HealthLink</title>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="navbar.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+</head>
+
+<body>
+    <div class="nav">
+        <%- include('partials/navbar.ejs') %>
+    </div>
+    <div class="body-container">
+        <div class="home" >
+            <div class="intro" id="home">
+                <h1>JNU HealthLink</h1>
+                <p>Are you looking for convenient and hassle-free doctor appointments? Look no further! <br>JNU HealthLink is here
+                    to simplify your healthcare journey.</p>
+                <div class="d-grid gap-2 col-6 ms-0">
+                    <a href="/login/user"><button class="btn btn-primary" type="button">Book Appointment</button></a>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="./assets/pic4.jpg" alt="Doctor" width="400" height="400" style="border-radius: 50%">
+            </div>
+
+
+        </div>
+        <h2 >Our Services</h2>
+        <div class="services1"id="services" >
+            <div class="photo">
+                <img src="./assets/pic2.jpg" alt="Doctor" width="400" height="400" style="border-radius: 50%">
+            </div>
+
+            <div>
+
+                <h3>Medical Specializations</h3>
+                <p>Discover a diverse range of medical specializations, including but not limited to:</p>
+                <ul>
+                    <li>Cardiology</li>
+                    <li>Dermatology</li>
+                    <li>Neurology</li>
+                    <li>Gastroenterology</li>
+                    <li>Psychiatry</li>
+                    <li>Orthopaedic</li>
+                    <li>Pediatrics</li>
+                </ul>
+            </div>
+
+
+
+        </div>
+        <div class="services2">
+
+            <div>
+
+                <h3>Meet Our Doctors</h3>
+                <p>Get to know our team of dedicated and qualified doctors. Each profile includes information about
+                    their education, experience, and patient reviews.</p>
+
+            </div>
+            <div class="photo">
+                <img src="./assets/pic3.jpg" alt="Doctor" width="400" height="400" style="border-radius: 50%">
+            </div>
+
+
+
+        </div>
+
+        <div class="services2">
+
+            <div class="photo">
+                <img src="./assets/pic5.jpg" alt="Doctor" width="400" height="400" style="border-radius: 50%">
+            </div>
+            <div>
+
+                <h3>Effortless Booking</h3>
+                <p> Use our simple search bar to find and book appointments with top-notch doctors based on their
+                    specialization</p>
+                <h3>Flexible Scheduling</h3>
+                <p>Choose a date and time that suits your schedule. Our user-friendly booking widget ensures a
+                    hassle-free appointment booking process.</p>
+
+            </div>
+        </div>
+        <div  id="contacts"><h2>Contacts</h2></div>
+        <div class="contact">
+            <div class="photo">
+                <img src="./assets/pic6.png" alt="Doctor" width="400" height="400" style="border-radius: 50%">
+            </div>
+            <div class="mid">
+                <h2 style="color: red;">Ambulance:</h2>
+                <h4 >9971728866</h4>
+                <h4> 9971728877</h4>
+                <br>
+                <h2>Address</h2>
+                <p>Near Ganga Hostel, JNU Campus, New Delhi, 110067</p>
+                
+            </div>
+            <div  class="photo">
+                <img src="./assets/pic7.jpg" alt="Doctor" width="400" height="400" style="border-radius: 50%">
+            </div>
+        </div>
+
+        <h2>About us</h2>
+        <div class="about" id="about">
+            <h4>Our Vision</h4>
+
+            <p>At JNU HealthLink, we envision a healthcare experience that puts you in control. We understand the challenges
+                of navigating the complex world of appointments, and we're here to simplify that process. Our platform
+                is designed to empower you to make informed decisions about your health.</p>
+
+            <h4>Why JNU HealthLink?</h4>
+
+            <p>
+            <h4>Accessibility:</h4> We believe that healthcare should be accessible to everyone. HealthEase connects you
+            with a diverse network of qualified healthcare providers, ensuring that you have choices that align with
+            your unique needs.</p>
+
+            <p>
+            <h4>Quality Care: </h4>Our commitment to excellence is reflected in the profiles of the doctors on our
+            platform. We carefully select healthcare professionals who are not only highly qualified but also dedicated
+            to providing the best possible care.</p>
+
+            <p>
+            <h4>Innovation:</h4> Embracing technology, we bring you the convenience of online consultations, allowing
+            you to consult with experienced doctors from the comfort of your home.</p>
+
+            <p>
+            <h4>Patient-Centric Approach:</h4> Your health is our priority. Our user-friendly platform, comprehensive
+            doctor profiles, and flexible scheduling options are designed with your needs in mind.</p>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="footer-cards" style="display: none;"> <!-- remove none to display -->
+        <div class="emergency">
+            <img src="" alt="icon">
+            <h3>Emergency Cases</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit itaque, dicta voluptas nihil esse
+                aliquam!</p>
+            <h3>+91-7545636373</h3>
+        </div>
+        <div class="booking">
+            <img src="" alt="icon">
+            <h3>online Booking</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit itaque, dicta voluptas nihil esse
+                aliquam!</p>
+            <h3>View time table</h3>
+        </div>
+        <div class="timing">
+            <img src="" alt="icon">
+            <h3>openning Hours</h3>
+            <p>Monday-Friday: 08:-7:00</p>
+            <p>Saturday: 08:-7:00</p>
+            <p>Sunday: 08:-7:00</p>
+        </div>
+    </div>
+
+    <hr>
+    <footer style=" display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h5>Developed  by <a href="https://www.linkedin.com/in/raja-sah-b15462203/">Raja Sah</a></h5>
+        <p>&copy; JNU HealthLink - All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<div id="nav-bar">
+    <input id="nav-toggle" type="checkbox"/>
+    <div id="nav-header"><a id="nav-title" href="../../" target="_blank"></i>JNU HealthLink</a>
+      <label for="nav-toggle"><span id="nav-toggle-burger"></span></label>
+      <hr/>
+    </div>
+    <div id="nav-content">
+      <div class="nav-button"><a  href="/user/home/<%= user._id %>"><i class="fa-solid fa-house"></i><span>Dashboard</span></a></div>
+      <div class="nav-button"><a href="/user/appointment/<%= user._id %>"><i class="fa-solid fa-calendar-check"></i><span>Book Appointment</span></a></div>
+      <div class="nav-button"><a  href="/user/profile/<%= user._id %>"><i class="fa-solid fa-user"></i><span>Profile</span></a></div>
+      <hr/>
+      <div class="nav-button"><a  href="/"><i  class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a></div>
+
+      <div id="nav-content-highlight"></div>
+    </div>
+    <input id="nav-footer-toggle" type="checkbox"/>
+    <div id="nav-footer">
+      <div id="nav-footer-heading">
+        <div id="nav-footer-avatar"><img src="https://gravatar.com/avatar/4474ca42d303761c2901fa819c4f2547"/></div>
+        <div id="nav-footer-titlebox"><a id="nav-footer-title" href=""><%= user.name %></a><span id="nav-footer-subtitle">User</span></div>
+        <label for="nav-footer-toggle"><i class="fas fa-caret-up"></i></label>
+      </div>
+      <div id="nav-footer-content">
+        <Lorem>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. userid</Lorem>
+        
+      </div>
+    </div>
+  </div>
+
+  

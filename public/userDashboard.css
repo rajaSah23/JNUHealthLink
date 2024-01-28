@@ -1,0 +1,31 @@
+body{
+    /* background-color: blueviolet !important; */
+    background: url("./assets/bgpic3.jpg");
+    height: 100vh;
+    background-size: cover;
+}
+.container{
+   
+    /* background-color: burlywood !important; */
+    margin-top: 100px;
+    margin-left: 300px !important;
+    /* border: 1px solid red; */
+    /* padding: 10px !important; */
+    /* width: 75rem !important; */
+    
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    color: rgb(232, 232, 232) !important;
+  }
+  table th {
+    background-color:#18283b !important;
+    
+  }
+  table{
+    width: 60%;
+  }
+  table td{
+    background-color: inherit !important;
+  }

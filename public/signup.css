@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:wght@300;400;500;600;700&family=Mooli&family=Poppins&display=swap');
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    padding: 10px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    width: 100vw;
+    /* background-color: rgba(3, 3, 3, 0.386) !important; */
+    background: url("./assets/bgpic1.jpg");
+    background-size: cover;
+}
+.signup-form{
+
+    
+    background-color:rgb(43, 190, 193);
+    /* width: 500px; */
+    width: 30rem;
+    /* height: 500px; */
+    padding: 25px;
+    margin-top: 30px;
+    /* padding-top: 40px; */
+    /* padding-bottom: 50px; */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+}
+.signup-form h2{
+    background-color: rgb(242, 92, 38);
+    width: 130px;
+    margin-left: -30px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.signup-form a{
+    color: black;
+    text-decoration: none;
+}

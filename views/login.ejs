@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JNU HealthLink</title>
+
+    <link rel="stylesheet" href="/login.css" />
+    <link rel="stylesheet" href="/temp.css">
+    <link rel="stylesheet" href="/toaster.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- <div class="login-form">
+      <form method="post" action="/login/user">
+        <h2>Login</h2>
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            placeholder="Enter username"
+            name="username"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Password"
+            name="password"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <a href="/signup/user">click to SignUp</a>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div> -->
+
+    <form method="post" action="/login/user">
+      <div class="container">
+        <div class="brand-logo"></div>
+        <div class="brand-title">Login</div>
+        <div class="inputs">
+          
+            <label for="username" class="form-label">Username</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter username"
+              name="username"
+              required
+            />
+          
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            type="password"
+            id="exampleInputPassword1"
+            placeholder="Password"
+            name="password"
+            required
+          />
+        </div>
+        
+        <a href="/signup/user">click to SignUp</a>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+
+    <div class="notifications"></div>
+    <script src="/toaster.js"></script>
+    <% if(message){ %>
+      <script>createToast("<%= msgType %>", 'fa-solid fa-circle-check',"<%= msgType %>", "<%= message %>");</script> 
+      <% } %>
+  </body>
+</html>

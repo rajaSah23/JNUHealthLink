@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Appointments</title>
+    <link rel="stylesheet" href="/userDashboard.css" />
+    <link rel="stylesheet" href="/sidenavbar.css" />
+    <link rel="stylesheet" href="/toaster.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="nav"><%- include('partials/docSidebar.ejs',{doctor}) %></div>
+    <div class="container">
+        <h1>New Appointments</h1>
+        <hr>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="col" >Patient </th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Address</th>
+                    <th scope="col" style="width: fit-content !important;">Appointment Date</th>
+                    <th scope="col"> Time</th>
+                    <!-- <th scope="col">Symptoms</th> -->
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                </tr>
+
+                <% for(var appointment of data){ %>
+                    <% if(appointment.status==='Pending' ){ %>
+                    <tr>
+
+                        <td >
+                            <%= appointment.name %>
+                        </td>
+                        <td>
+                            <%= appointment.phone %>
+                        </td>
+                        <td>
+                            <%= appointment.email %>
+                        </td>
+                        <td>
+                            <%= appointment.address %>
+                        </td>
+                        <td>
+                            <%= appointment.date.substring(0,15) %>
+                        </td>
+                        <td>
+                            <%= appointment.time %>
+                        </td>
+                        <!-- <td onclick="msgFunction('<%=// appointment.address %>')"
+                            style="color: blue !important; cursor: pointer; font-weight: 600;">click here</td> -->
+                            
+                        <% if(appointment.status === "Pending" ){ %>
+                            <td style="color: yellow !important; font-weight: 700;">
+                                <%= appointment.status %>
+                            </td>
+                            <% }%>
+                                        <td style="display: flex;">
+                                            <form action="/doctor/appointment/" method="post" style="padding: inherit;" >
+                                                <input type="hidden" name="apid" value="<%= appointment.apid %>">
+                                                <input type="hidden" name="status" value="Booked">
+                                                <button>Book</button>
+                                            </form>
+                                            <form action="/doctor/appointment/" method="post" style="padding: inherit;" >
+                                                <input type="hidden" name="apid" value="<%= appointment.apid %>">
+                                                <input type="hidden" name="status" value="Cancelled">
+                                                <button>Cancel</button>
+                                            </form>
+                                        </td>
+                    </tr>
+                    <% } %>
+                    <% } %>
+            </thead>
+            <tbody>
+    </div>
+    
+    <div class="notifications"></div>
+    <script src="/toaster.js"></script>
+
+    <% if(message){ %>
+      <script>createToast('<%= msgType %>', 'fa-solid fa-circle-check', '<%= msgType %>', '<%= message %>');</script> 
+    <% } %>
+    
+    <script>
+        function msgFunction(symp) {
+            alert(symp);
+        }
+        
+    </script>
+</body>

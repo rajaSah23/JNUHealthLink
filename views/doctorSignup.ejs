@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JNU HealthLink</title>
+
+    <link rel="stylesheet" href="/signup.css" />
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="signup-form">
+        <form method="post" action="/signup/doctor">
+            <!-- <h2>Doctor</h2> -->
+            <h2>SignUp</h2>
+            <div class="mb-3">
+                <label for="name" class="form-label">Enter name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required/>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone no:</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phone" required/>
+
+                    
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter email" name="email" required/>
+                        <div id="emailHelp" class="form-text">
+                            We'll never share your email with anyone else.
+                        </div>
+                    </div>
+                    
+                    <span>Gender</span>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" value="male" name="gender" id="flexRadioDefault1" required>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Male
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" value="female" name="gender" id="flexRadioDefault2" required>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Female
+                        </label>
+                      </div>
+                      <br>
+
+                    <span>Medical Specialty</span>
+                      <select class="form-select" name="specialty">
+                        <option value="Cardiologist" selected>Cardiologist</option>
+                        <option value="Dermatologist">Dermatologist</option>
+                        <option value="Surgeon">Surgeon</option>
+                        <option value="Physicians">Physicians</option>
+                      </select>
+                      <br>
+
+                      <span  class="form-label">About you</span>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="" id="floatingTextarea2"
+                            style="height: 100px" name="bio" ></textarea>
+                        <label for="floatingTextarea2">Write your bio..</label>
+                    </div>
+
+                    <br>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                            aria-describedby="basic-addon1" name="username" required/>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Create Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                            name="password" required/>
+                    </div>
+                    <div class="mb-3">
+                        <a href="/login/doctor">click to Login</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

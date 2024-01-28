@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JNU HealthLink</title>
+
+    <!-- <link rel="stylesheet" href="/signup.css" /> -->
+    <link rel="stylesheet" href="/login.css" />
+
+    <link rel="stylesheet" href="/signup2.css" />
+
+    <link rel="stylesheet" href="/toaster.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+</head>
+
+<body>
+    <!-- <div class="signup-form">
+        <form method="post" action="/signup/user">
+            <h2>SignUp</h2>
+            <div class="mb-3">
+                <label for="name" class="form-label">Enter name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required/>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone no:</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phone" required/>
+
+                    <br>
+                    <span>Gender</span>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault1" required>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Male
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault2" required>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Female
+                        </label>
+                      </div>
+                      <br>
+
+
+                    <span  class="form-label">Address</span>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                            style="height: 100px" name="address" ></textarea>
+                        <label for="floatingTextarea2">Enter your full address..</label>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter email" name="email" required/>
+                        <div id="emailHelp" class="form-text">
+                            We'll never share your email with anyone else.
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                            aria-describedby="basic-addon1" name="username" required/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Create Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                            name="password" required/>
+                    </div>
+                    <div class="mb-3">
+                        <a href="/login/user">click to Login</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div> -->
+
+    <form method="post" action="/signup/user">
+        <div class="container" style="width: 30rem !important; padding: 10px;" >
+          <div class="brand-logo"></div>
+          <div class="brand-title">Register</div>
+
+          
+          <div class="inputs">
+           <label for="name" >Enter name</label>
+           <input type="text" class="form-control"  id="name" placeholder="Enter name" name="name" required/>
+
+           <label for="phone" >Phone no:</label>
+           <input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phone" required/>
+           
+           <br>
+            <span>Gender</span>
+            <div style="display: flex;">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault1" required>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Male
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault2" required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Female
+                    </label>
+                </div>
+            </div>
+            <br>
+            <span  class="form-label">Address</span>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                    style="height: 100px" name="address" ></textarea>
+            </div>
+            <br>
+
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter email" name="email" required/>
+            <div id="emailHelp" class="form-text">
+                            We'll never share your email with anyone else.
+            </div>
+            <br>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                    aria-describedby="basic-addon1" name="username" required/>
+            </div>
+            
+            
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Create Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                    name="password" required/>
+            </div>
+
+            <div class="mb-3">
+                <a href="/login/user">click to Login</a>
+                <button type="submit" class="btn btn-primary">Register</button>
+                <br>
+            </div>
+
+
+
+
+
+
+
+
+
+
+              <!-- <label for="username" class="form-label">Username</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Enter username"
+                name="username"
+                required
+              />
+            
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input
+              type="password"
+              id="exampleInputPassword1"
+              placeholder="Password"
+              name="password"
+              required
+            /> -->
+          <!-- </div>
+          
+          <a href="/signup/user">click to SignUp</a>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div> -->
+      </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="notifications"></div>
+    <script src="/toaster.js"></script>
+    <% if(message){ %>
+      <script>createToast("<%= msgType %>", 'fa-solid fa-circle-check',"<%= msgType %>", "<%= message %>");</script> 
+      <% } %>
+</body>
+
+</html>

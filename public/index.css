@@ -1,0 +1,158 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:wght@300;400;500;600;700&family=Mooli&family=Poppins&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.body-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+h2,h3{
+    font-weight: 700 !important;
+}
+.home{
+    margin-top: 60px;
+    margin: 10rem;
+    width: 100%;
+    height:100%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    /* border: 1px solid red; */
+    
+}
+.intro, .photo{
+    /* border: 1px solid #ccc; */
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.intro{
+    height: 30rem;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items:flex-start;
+    padding: 50px;
+}
+.intro h1{
+    font-weight: 700;
+}
+.intro p,.intro div{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.d-grid .btn{
+    border-radius: 20px !important;
+    height: 40px;
+    width: 20rem;
+    background-color: blueviolet;
+}
+
+
+/* Services */
+.services1,.services2{
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 50px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.services1 div,.services2 div{
+    /* border: 1px solid #ccc; */
+    height: 30rem;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+}
+.body-container img{
+    border-radius: 0px !important;
+    width: 500px;
+    height: 400px
+}
+.contact{
+    border: 2px dotted #ff0000;
+    border-radius: 20px;
+    margin: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+   
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.contact div{
+    /* border: 1px solid #ccc; */
+    height: 30rem;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+}
+.contact .mid{
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.contact h4{
+    padding-left:20px;
+    padding-right: 20px;
+
+    background-color: rgb(208, 0, 0); color: white;
+}
+.about{
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+/* Footer */
+.footer-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* border: 1px solid; */
+    
+
+}
+
+.footer-cards .emergency,.footer-cards .booking,.footer-cards .timing{
+    flex-shrink: calc(0);
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    height: 25rem;
+    /* width: 25rem; */
+    /* border: 1px solid blue; */
+    padding: 50px;
+    background-color: antiquewhite;
+} 
+.footer-cards .emergency{
+    background-color: rgba(0, 100, 0, 0.703);
+    color:white;
+}
+.footer-cards .timing{
+    background-color:rgba(0, 0, 100, 0.867);
+    color:white;
+}
