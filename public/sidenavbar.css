@@ -5,7 +5,8 @@
 }
 
 :root {
-    --background: #9c88ff;
+    /* --background: #9c88ff; */
+    --background: #b45ef5;
     --navbar-width: 256px;
     --navbar-width-min: 80px;
     --navbar-dark-primary: #18283b;
