@@ -1,2 +1,3 @@
 # for not to upload some files on github(optional)
 /node_modules
+.env
