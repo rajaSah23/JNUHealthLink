@@ -20,11 +20,8 @@ const { log } = require('console');
 
 //MongoDB connection
 async function main() {
-    // const dbPassword = process.env.DB_PASSWORD;
-    // const dbUser =process.env.DB_USERNAME;
-    // await mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@rajasah.2ki3ylu.mongodb.net/jnuhealthlink`);//to create and connect with new 
-    
-    await mongoose.connect(`mongodb+srv://rajasah143rk:Rajasah143rk@rajasah.2ki3ylu.mongodb.net/jnuhealthlink`);//to create and connect with new 
+    const dburl=process.env.DB_URL;
+    await mongoose.connect(`${dburl}/jnuhealthlink`);//to create and connect with new 
 
   }
   //calling main() method to execute
@@ -43,8 +40,6 @@ app.get('/', (req, res) => {
 
 //All Route
 app.use('/', require('./routes/mainRouter.js'));  //goto routes/mainRouter.js 
-
-
 
 
 app.listen(port, () => {
